@@ -64,11 +64,11 @@ const experience = {
       position: "Full-Stack Developer Freelance",
       duration: "2024 - Present",
     },
-    {
-      company: "Hewlett-Packard (HP), Nigeria",
-      position: "Intern",
-      duration: "Summer 2025",
-    },
+    // {
+    //   company: "Hewlett-Packard (HP), Nigeria",
+    //   position: "Intern",
+    //   duration: "Summer 2025",
+    // },
     {
       company: "Verraki, Nigeria",
       position: "Networking and CyberSecurity Intern",
