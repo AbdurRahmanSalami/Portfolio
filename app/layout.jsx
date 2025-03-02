@@ -3,6 +3,7 @@ import "./globals.css";
 
 //analytics
 import { Analytics } from "@vercel/analytics/react"
+import { SpeedInsights } from "@vercel/speed-insights/next"
 
 //components
 import Header from "@/components/Header";
@@ -28,6 +29,7 @@ export default function RootLayout({ children }) {
         <StairTransition />
         <PageTransition>{children}</PageTransition>
         <Analytics />
+        <SpeedInsights />
 </body>
     </html>
   );
