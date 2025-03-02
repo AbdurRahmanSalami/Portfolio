@@ -25,23 +25,28 @@ const projects = [
     category: "full-stack",
     title: "Toothfixers",
     description:
-      "Toothfixers is a comprehensive dental record management system designed to streamline patient and clinic data management. This full-stack project allows users to add, view, and manage patient records efficiently, ensuring seamless clinic operations. Built with modern web technologies, it provides a user-friendly interface for dentists and clinic staff to access essential information securely and conveniently.",
-    stack: [{ name: "TypeScript" }, { name: "Html 5" }, { name: "Css 3" }, { name: "Javascript" }],
-    image: "/assets/work/thumb1.png",
+      "Toothfixers is a full-stack dental record management system that streamlines patient and clinic data. It enables efficient record management with a secure, user-friendly interface for dentists and staff, ensuring seamless clinic operations.",
+    stack: [
+      { name: "TypeScript" },
+      { name: "Html 5" },
+      { name: "Css 3" },
+      { name: "Javascript" },
+    ],
+    image: "/assets/work/toothfixers.png",
     live: "",
     github: "https://github.com/AbdurRahmanSalami/toothfixers",
   },
-  // {
-  //   num: "02",
-  //   category: "fullstack",
-  //   title: "project 2",
-  //   description:
-  //     "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Qui repellendus architecto quos eveniet doloremque",
-  //   stack: [{ name: "Next.js" }, { name: "Tailwind.css" }, { name: "Node.js" }],
-  //   image: "/assets/work/thumb2.png",
-  //   live: "",
-  //   github: "",
-  // },
+  {
+    num: "02",
+    category: "UI/UX",
+    title: "CBT Prototype",
+    description:
+      "This UI/UX project designs an intuitive student assessment platform with a login screen, dashboard, test interface, and result screen. Built in Figma, it ensures a seamless user experience with a clean layout, easy navigation, and interactive elements for efficient test-taking and performance tracking.",
+    stack: [{ name: "Figma" }],
+    image: "/assets/work/cbtlogin.png",
+    live: "https://www.figma.com/design/r0VZrQFomjCyWi2iWRNXP7/Abdur-Rahman's-INS-204?m=auto&t=GGJbVwwon8LRMxEu-6",
+    github: "https://github.com/AbdurRahmanSalami",
+  },
   // {
   //   num: "03",
   //   category: "frontend",
@@ -105,7 +110,11 @@ const Work = () => {
               {/* buttons */}
               <div className="flex items-center gap-4">
                 {/* live project */}
-                <Link href={project.live} target="_blank" rel="noopener noreferrer">
+                <Link
+                  href={project.live}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
                   <TooltipProvider delayDuration={100}>
                     <Tooltip>
                       <TooltipTrigger className="w-[70px] h-[70px] rounded-full bg-white/5 flex justify-center items-center group">
@@ -118,7 +127,11 @@ const Work = () => {
                   </TooltipProvider>
                 </Link>
                 {/* github project button */}
-                <Link href={project.github} target="_blank" rel="noopener noreferrer">
+                <Link
+                  href={project.github}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
                   <TooltipProvider delayDuration={100}>
                     <Tooltip>
                       <TooltipTrigger className="w-[70px] h-[70px] rounded-full bg-white/5 flex justify-center items-center group">

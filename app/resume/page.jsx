@@ -11,7 +11,7 @@ import {
   FaJava,
 } from "react-icons/fa";
 
-import { SiTailwindcss, SiNextdotjs } from "react-icons/si";
+import { SiTailwindcss, SiNextdotjs, SiTypescript} from "react-icons/si";
 
 //about data
 const about = {
@@ -179,6 +179,10 @@ const skills = {
     {
       icon: <FaJava />,
       name: "java",
+    },
+    {
+      icon: <SiTypescript />,
+      name: "typescript",
     },
   ],
 };
