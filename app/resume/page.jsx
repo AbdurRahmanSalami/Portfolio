@@ -7,6 +7,8 @@ import {
   FaReact,
   FaFigma,
   FaNodeJs,
+  FaRust,
+  FaJava,
 } from "react-icons/fa";
 
 import { SiTailwindcss, SiNextdotjs } from "react-icons/si";
@@ -15,7 +17,7 @@ import { SiTailwindcss, SiNextdotjs } from "react-icons/si";
 const about = {
   title: "About me",
   description:
-    "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dolor sit tempore illum quia sed, voluptate est libero laborum ",
+    "I am a passionate and detail-oriented computer science student with over 3 years of experience in networking, cybersecurity, and full-stack development. My expertise includes web development (React, Node.js, JavaScript, Tailwind CSS), system programming (Rust, Java).  I have hands-on experience in network architecture, project management, and cybersecurity frameworks from my internship at Verraki. I am open to work, eager to collaborate on innovative projects, and committed to continuous learning in secure software development and system design.",
   info: [
     {
       fieldName: "Name",
@@ -57,7 +59,7 @@ const experience = {
   icon: "/assets/resume/badge.svg",
   title: "My experience",
   description:
-    "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dolor sit tempore illum quia sed, voluptate est libero laborum ",
+    "As a passionate computer science student, I specialize in full-stack development, networking architecture, and cybersecurity. With experience in freelance development and internships in cybersecurity and networking, I have worked on projects involving network infrastructure and security models. I thrive in dynamic environments where I can solve complex technical problems and contribute to innovative solutions.",
   items: [
     {
       company: "Friends In Fath (FIF)",
@@ -97,7 +99,7 @@ const education = {
   icon: "/assets/resume/cap.svg",
   title: "My education",
   description:
-    "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dolor sit tempore illum quia sed, voluptate est libero laborum ",
+    "I am currently pursuing a Bachelor’s degree in Computer Science at Pan-Atlantic University, where I am building a strong foundation in programming, cybersecurity, and networking. Alongside my formal education, I have completed specialized courses in full-stack development and Java, further expanding my technical skill set. My studies and certifications have equipped me with the knowledge to develop secure applications and manage complex IT infrastructures.",
   items: [
     {
       institution: "Pan-Atlantic University",
@@ -136,7 +138,7 @@ const education = {
 const skills = {
   title: "My skills",
   description:
-    "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dolor sit tempore illum quia sed, voluptate est libero laborum ",
+    "I have a strong foundation in web development, full-stack engineering, and cybersecurity. My technical expertise includes HTML, CSS, JavaScript, React, and Tailwind for frontend development, along with Node.js for backend solutions. Additionally, I am proficient in Rust, Java, and system programming concepts. I am passionate about building scalable applications, designing secure systems, and continuously improving my skills.",
   skillList: [
     {
       icon: <FaHtml5 />,
@@ -169,6 +171,14 @@ const skills = {
     {
       icon: <FaFigma />,
       name: "figma",
+    },
+    {
+      icon: <FaRust />,
+      name: "rust",
+    },
+    {
+      icon: <FaJava />,
+      name: "java",
     },
   ],
 };
@@ -318,7 +328,10 @@ const Resume = () => {
                 <ul className="grid grid-cols-1 xl:grid-cols-2 gap-y-6 max-w-[620px] mx-auto xl:mx-0">
                   {about.info.map((item, index) => {
                     return (
-                      <li key={index} className="flex items-center justify-center xl:justify-start gap-4">
+                      <li
+                        key={index}
+                        className="flex items-center justify-center xl:justify-start gap-4"
+                      >
                         <span className="text-white/60 ">{item.fieldName}</span>
                         <span className="text-xl ">{item.fieldValue}</span>
                       </li>
