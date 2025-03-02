@@ -2,8 +2,8 @@ import { JetBrains_Mono } from "next/font/google";
 import "./globals.css";
 
 //analytics
-import { Analytics } from "@vercel/analytics/react"
-import { SpeedInsights } from "@vercel/speed-insights/next"
+import { Analytics } from "@vercel/analytics/react";
+import { SpeedInsights } from "@vercel/speed-insights/next";
 
 //components
 import Header from "@/components/Header";
@@ -11,10 +11,10 @@ import PageTransition from "@/components/PageTransition";
 import StairTransition from "@/components/StairTransition";
 
 const jetbrainsMono = JetBrains_Mono({
-  subsets: ["latin"], 
+  subsets: ["latin"],
   weight: ["100", "200", "300", "400", "500", "600", "700", "800"],
-  variable: '--font-jetbrainsMono'
-})
+  variable: "--font-jetbrainsMono",
+});
 
 export const metadata = {
   title: "Create Next App",
@@ -30,7 +30,7 @@ export default function RootLayout({ children }) {
         <PageTransition>{children}</PageTransition>
         <Analytics />
         <SpeedInsights />
-</body>
+      </body>
     </html>
   );
 }
