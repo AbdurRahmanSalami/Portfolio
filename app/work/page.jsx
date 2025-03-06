@@ -56,7 +56,7 @@ const projects = [
     stack: [{ name: "Rust" }],
     image: "/assets/work/osdevelopment.png",
     live: "",
-    github: "",
+    github: "https://github.com/AbdurRahmanSalami/CSC-308/tree/main/os_with_bootloader",
   },
 ];
 
