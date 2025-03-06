@@ -47,17 +47,17 @@ const projects = [
     live: "https://www.figma.com/design/r0VZrQFomjCyWi2iWRNXP7/Abdur-Rahman's-INS-204?m=auto&t=GGJbVwwon8LRMxEu-6",
     github: "https://github.com/AbdurRahmanSalami",
   },
-  // {
-  //   num: "03",
-  //   category: "frontend",
-  //   title: "project 3",
-  //   description:
-  //     "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Qui repellendus architecto quos eveniet doloremque",
-  //   stack: [{ name: "Next.js" }, { name: "Tailwind.css" }],
-  //   image: "/assets/work/thumb3.png",
-  //   live: "",
-  //   github: "",
-  // },
+  {
+    num: "03",
+    category: "Systems Programming",
+    title: "project 3",
+    description:
+      "I developed a basic operating system from scratch using Rust, running on QEMU. This OS features direct text rendering with support for color formatting and indentation, showcasing early-stage terminal control. Built with a custom bootloader and low-level memory management, it serves as a foundational step in OS development.",
+    stack: [{ name: "Rust" }],
+    image: "/assets/work/osdevelopment.png",
+    live: "",
+    github: "",
+  },
 ];
 
 const Work = () => {
