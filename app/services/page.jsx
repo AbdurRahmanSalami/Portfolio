@@ -9,21 +9,21 @@ const services = [
     title: "Web development",
     decription:
       "I build responsive, high-performance websites using modern technologies like HTML, CSS, JavaScript, and frameworks such as React and Next.js. From landing pages to full-stack applications, I create seamless web experiences.",
-    href: "",
+    href: "./work",
   },
   {
     num: "02",
     title: "UI/UX Design",
     decription:
       "User experience is at the heart of my designs. I create intuitive and visually appealing interfaces using tools like Figma and Adobe XD, ensuring seamless user interactions across devices.",
-    href: "",
+    href: "./work",
   },
   {
     num: "03",
     title: "Mobile Application development",
     decription:
       "I develop cross-platform mobile apps using frameworks like React Native and Flutter, ensuring smooth performance and great user experiences across iOS and Android devices.",
-    href: "",
+    href: "./work",
   },
   // {
   //   num: "03",
