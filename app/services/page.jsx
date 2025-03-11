@@ -25,13 +25,6 @@ const services = [
       "I develop cross-platform mobile apps using frameworks like React Native and Flutter, ensuring smooth performance and great user experiences across iOS and Android devices.",
     href: "./work",
   },
-  // {
-  //   num: "03",
-  //   title: "Mobile Application development",
-  //   decription:
-  //     "Lorem ipsum dolor sit amet consectetur magni sed! Molestias, sapiente autem?",
-  //   href: "",
-  // },
 ];
 
 import { motion } from "framer-motion";
