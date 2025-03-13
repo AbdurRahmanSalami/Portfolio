@@ -1,5 +1,6 @@
 "use client";
 
+import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
@@ -15,6 +16,7 @@ import {
 } from "@/components/ui/select";
 
 import { FaPhoneAlt, FaEnvelope, FaMapMarkerAlt } from "react-icons/fa";
+import { motion } from "framer-motion";
 
 const info = [
   {
@@ -34,9 +36,36 @@ const info = [
   },
 ];
 
-import { motion } from "framer-motion";
-
 const Contact = () => {
+  const [formData, setFormData] = useState({
+    firstname: "",
+    lastname: "",
+    email: "",
+    phone: "",
+    service: "",
+    message: "",
+  });
+
+  const handleChange = (e) => {
+    setFormData({ ...formData, [e.target.name]: e.target.value });
+  };
+
+  const handleServiceChange = (value) => {
+    setFormData({ ...formData, service: value });
+  };
+
+  const handleSendEmail = () => {
+    const { firstname, lastname, email, phone, service, message } = formData;
+
+    const subject = encodeURIComponent(`Inquiry about ${service}`);
+    const body = encodeURIComponent(
+      `Name: ${firstname} ${lastname}\nEmail: ${email}\nPhone: ${phone}\n\nService: ${service}\n\nMessage:\n${message}`
+    );
+
+    const mailtoLink = `mailto:abdursalamioluwa@gmail.com?subject=${subject}&body=${body}`;
+    window.location.href = mailtoLink;
+  };
+
   return (
     <motion.section
       initial={{ opacity: 0 }}
@@ -62,39 +91,68 @@ const Contact = () => {
                 For inquiries, please reach out via the phone number or email
                 provided. This contact form is currently under development.
               </p>
-              {/* input */}
+              {/* input fields */}
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                <Input type="firstname" placeholder="Firstname" />
-                <Input type="lastname" placeholder="Lastname" />
-                <Input type="email" placeholder="Email address" />
-                <Input type="phone" placeholder="Phone number" />
+                <Input
+                  type="text"
+                  name="firstname"
+                  placeholder="Firstname"
+                  value={formData.firstname}
+                  onChange={handleChange}
+                />
+                <Input
+                  type="text"
+                  name="lastname"
+                  placeholder="Lastname"
+                  value={formData.lastname}
+                  onChange={handleChange}
+                />
+                <Input
+                  type="email"
+                  name="email"
+                  placeholder="Email address"
+                  value={formData.email}
+                  onChange={handleChange}
+                />
+                <Input
+                  type="tel"
+                  name="phone"
+                  placeholder="Phone number"
+                  value={formData.phone}
+                  onChange={handleChange}
+                />
               </div>
-              {/* select */}
-              <Select>
+              {/* select service */}
+              <Select onValueChange={handleServiceChange}>
                 <SelectTrigger className="w-full">
                   <SelectValue placeholder="Select a service" />
                 </SelectTrigger>
                 <SelectContent>
                   <SelectGroup>
                     <SelectLabel>Select a service</SelectLabel>
-                    <SelectItem value="est">Web Development</SelectItem>
-                    <SelectItem value="cst">UI/UX Design</SelectItem>
-                    <SelectItem value="mst">Full-time Job</SelectItem>
+                    <SelectItem value="Web Development">
+                      Web Development
+                    </SelectItem>
+                    <SelectItem value="UI/UX Design">UI/UX Design</SelectItem>
+                    <SelectItem value="Full-time Job">Full-time Job</SelectItem>
                   </SelectGroup>
                 </SelectContent>
               </Select>
               {/* textarea */}
               <Textarea
                 className="h-[200px]"
+                name="message"
                 placeholder="Type your message here."
+                value={formData.message}
+                onChange={handleChange}
               />
               {/* button */}
-              <Button size="md" className="max-w-40">
+              <Button size="md" className="max-w-40" onClick={handleSendEmail}>
                 Send message
               </Button>
             </form>
           </div>
-          {/* info */}
+          {/* contact info */}
           <div className="flex-1 flex items-center xl:justify-end order-1 xl:order-none mb-8 xl:mb-0">
             <ul className="flex flex-col gap-10">
               {info.map((item, index) => {
