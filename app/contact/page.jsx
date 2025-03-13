@@ -59,7 +59,7 @@ const Contact = () => {
 
     const subject = encodeURIComponent(`Inquiry about ${service}`);
     const body = encodeURIComponent(
-      `Name: ${firstname} ${lastname}\nEmail: ${email}\nPhone: ${phone}\n\nService: ${service}\n\nMessage:\n${message}`
+      `Service: ${service}\n\n${message}\n\n${firstname} ${lastname}\n${phone}`
     );
 
     const mailtoLink = `mailto:abdursalamioluwa@gmail.com?subject=${subject}&body=${body}`;
@@ -87,10 +87,10 @@ const Contact = () => {
                 cybersecurity, or networking solutions, I'm here to help. Let's
                 discuss how we can bring your ideas to life.
               </p>
-              <p className="text-white/60">
+              {/* <p className="text-white/60">
                 For inquiries, please reach out via the phone number or email
                 provided. This contact form is currently under development.
-              </p>
+              </p> */}
               {/* input fields */}
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                 <Input
