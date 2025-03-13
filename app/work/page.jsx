@@ -56,7 +56,8 @@ const projects = [
     stack: [{ name: "Rust" }],
     image: "/assets/work/osdevelopment.png",
     live: "",
-    github: "https://github.com/AbdurRahmanSalami/CSC-308/tree/main/os_with_bootloader",
+    github:
+      "https://github.com/AbdurRahmanSalami/CSC-308/tree/main/os_with_bootloader",
   },
   {
     num: "04",
@@ -64,7 +65,11 @@ const projects = [
     title: "project 4",
     description:
       "I designed and developed a personal portfolio website to showcase my projects, skills, and experience. Built using modern web technologies, like Nextjs and tailwindcss, the site features an interactive UI, a responsive layout, and optimized performance. It highlights my work in system programming, web development, and cloud computing while integrating smooth navigation and a dark-themed aesthetic for a professional presentation.",
-    stack: [{ name: "Javascript" }, { name: "Tailwindcss" }],
+    stack: [
+      { name: "Nextjs" }, 
+      { name: "Javascript" },
+      { name: "Tailwindcss" },
+    ],
     image: "/assets/work/portfolio.png",
     live: "https://portfolio-abdurrahmansalamis-projects.vercel.app/",
     github: "https://github.com/AbdurRahmanSalami/Portfolio",
